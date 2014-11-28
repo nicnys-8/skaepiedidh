@@ -1,0 +1,25 @@
+img {
+  width: 100%; /* Unnecessary?*/
+}
+.navbar {
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
+.thumbnail {
+  box-shadow: 3px 3px 3px #DDDDDD;
+  padding: 0px;
+}
+
+.main-text {
+  position: absolute;
+  top: 50px;
+  width: 96.66666666666666%;
+  color: #FFF;
+  text-shadow: 2px 2px 8px #2E2E2E;
+}
+
+.padding {
+  display: inline;
+}
+

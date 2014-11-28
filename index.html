@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Skaepiedidh</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script>
+
+    function setTextPadding() {
+        var titles = $('.title-field');
+        var maxLength = Math.max.apply(
+            Math, titles.map(function() {
+                return $(this).find("a").text().length;
+            }).get());
+
+        titles.each(function(){
+            var length = $(this).find("a").text().length;
+            var difference = maxLength - length;
+            var padding = Array(difference).join(" &nbsp");
+            $(this).find(".padding").html(padding);
+        });
+    }
+
+    $(document).ready(setTextPadding);
+
+        </script>
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-inverse" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Skaepiedidh</a>
+            </div>
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Hem</a></li>
+                <li><a href="#about">Om oss</a></li>
+                <li><a href="#contact">Kontakta oss</a></li>
+                <li><a href="#user-guide-modal" data-toggle="modal"><small>User guide</small></a></li>
+
+                <li class="dropdown-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nicklas Nyström
+                        <span class="caret">
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Kreationer</li>
+                        <li><a href="#">Skapa</a></li>
+                        <li><a href="#">Favoriter</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Konto</li>
+                        <li><a href="#">Logga ut</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="img/link.png" alt="First slide">
+                </div>
+                <div class="item">
+                    <img src="img/sion.png">
+                </div>
+                <div class="item">
+                    <img src="img/garnet.png">
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control"
+                href="#carousel-example-generic" data-slide="next"><span class="glyphicon glyphicon-chevron-right">
+            </span></a>
+        </div>
+        <div class="main-text hidden-xs">
+            <div class="col-md-12 text-center">
+                <h1>
+                    Skapa nånting coolt!
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="divider" style="border: 0;">
+
+
+<!---------------------->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-xs-6">
+            <div class="thumbnail">
+                <img src="img/hest.png"/>
+                <div class="caption">
+                    <h4 class="title-field">
+                        <a>Hästen som är bättre än de flesta.</a>
+                        <div class="padding"></div>
+                    </h4>
+                    <p>
+                        Av <a>Jimmy Nyström</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <div class="thumbnail">
+                <img src="img/sabre.png"/>
+                <div class="caption">
+                    <h4 class="title-field">
+                        <a>Ett sabeltandat lodjur</a>
+                        <div class="padding"></div>
+                    </h4>
+                    <p>
+                        Av <a>Nicklas Nyström</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <div class="thumbnail">
+                <img src="img/skissbord.png"/>
+                <div class="caption">
+                    <h4 class="title-field">
+                        <a>Det medierade skissbordet</a>
+                        <div class="padding"></div>
+                    </h4>
+                    <p>
+                        Av <a>Nicklas Nyström</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-4 col-xs-6">
+            <div class="thumbnail">
+                <img src="img/tor.png"/>
+                <div class="caption">
+                    <h4 class="title-field">
+                        <a>Spöa en åskgud!</a>
+                        <div class="padding"></div>
+                    </h4>
+                    <p>
+                        Av <a>Jimmy Nyström</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <div class="thumbnail">
+                <img src="img/jul.png"/>
+                <div class="caption">
+                    <h4 class="title-field">
+                        <a>Skrövla ihop din egen julgran</a>
+                        <div class="padding"></div>
+                    </h4>
+                    <p>
+                        Av <a>Nicklas Nyström</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <div class="thumbnail">
+                <img src="img/spindel.png"/>
+                <div class="caption">
+                    <h4 class="title-field">
+                        <a>Bygg ett leddjur</a>
+                        <div class="padding"></div>
+                    </h4>
+                    <p>
+                        Av <a>Nicklas Nyström</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="featurette-divider">
+
+
+<!-- FOOTER -->
+<div class="container">
+    <footer>
+        <p class="pull-right"><a href="#">Tillbaka till toppen</a>
+        </p>
+        <p>© 2014 Vårt företag, Inc. · <a href="#">Integritet <!-- Alltså privacy----></a> · <a href="#">Terms</a--></p>
+    </footer>
+
+</div>
+</div>
+
+
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/docs.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug >
+        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script-->
+            <!-- User guide modal -->
+            <div id="user-guide-modal" class="modal hide fade in">
+                <div class="modal-header">
+                    <a class="close" data-dismiss="modal">
+                        <i class="icon-remove-circle"></i>
+                    </a>
+                    <h3> Heeello </h3>
+                </div>
+                <div class="modal-body">
+                    <p>Dodododoo!</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-small" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+
+
+        </body>
+
+        </html>
